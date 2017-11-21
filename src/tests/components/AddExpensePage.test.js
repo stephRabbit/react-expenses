@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 import { AddExpensePage } from '../../components/AddExpensePage';
-import expense from '../fixtures/expenses';
+import expenses from '../fixtures/expenses';
 
-let onSubmit;
-let history;
-let wrapper;
+let addExpense, history, wrapper;
 
 beforeEach(() => {
-  onSubmit = jest.fn();
-  history = { push: jest.fn() }
-  wrapper = shallow(<AddExpensePage onSubmit={onSubmit} history={history} />);
-})
+  addExpense = jest.fn();
+  history = { push: jest.fn() };
+  wrapper = shallow(<AddExpensePage addExpense={addExpense} history={history} />);
+});
 
-test('should render AddExpensePage', () => {
+test('should render AddExpensePage correctly', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
 test('should handle onSubmit', () => {
-  wrapper.find('ExpenseForm').prop('onSubmit')(expense[0]);
+  wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
   expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(onSubmit).toHaveBeenLastCalledWith(expense[0]);
+  expect(addExpense).toHaveBeenLastCalledWith(expenses[1]);
 });

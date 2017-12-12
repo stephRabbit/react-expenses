@@ -1,0 +1,22 @@
+.box-layout {
+  align-items: center;
+  background-color: $green;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box-layout__box {
+  background: fade-out($color: #fff, $amount: .15);
+  -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.2);
+  box-shadow: 0 7px 15px rgba(0,0,0,.2);
+  text-align: center;
+  padding: $l-size $m-size;
+  width: 35rem;
+}
+
+.box-layout__title {
+  line-height: 1;
+  margin: 0 0 $m-size 0;
+}

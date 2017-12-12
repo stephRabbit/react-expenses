@@ -1,0 +1,34 @@
+.btn {
+  background: white;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: $fs-large;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.btn--small {
+  font-size: $fs-small;
+}
+
+.btn--green {
+  color: white;
+  background-color: $green;
+}
+
+.btn--red {
+  color: white;
+  background-color: $red;
+}
+
+.btn--fade {
+  background: fade-out($color: #fff, $amount: .70);
+}
+
+.btn--lifted {
+  -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.2);
+  box-shadow: 0 7px 15px rgba(0,0,0,.2);
+}
+

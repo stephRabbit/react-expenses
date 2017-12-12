@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LoadingPage correctly 1`] = `
+<div
+  className="loader"
+>
+  <div
+    className="loader__item"
+  >
+    <div
+      className="loader__rect1"
+    />
+    <div
+      className="loader__rect2"
+    />
+    <div
+      className="loader__rect3"
+    />
+    <div
+      className="loader__rect4"
+    />
+    <div
+      className="loader__rect5"
+    />
+  </div>
+</div>
+`;

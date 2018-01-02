@@ -1,5 +1,5 @@
 node_modules/
 public/dist/
+src/playground
 .env.test
 .env.development
-src/playground/
